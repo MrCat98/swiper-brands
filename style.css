@@ -44,6 +44,7 @@ body{
 .swiper-wrapper{
    display: flex;
    gap:16px;
+   margin-left: 16px;
 }
 
 .arrow-go{
@@ -119,13 +120,14 @@ body{
   display: grid;
   grid-template-columns:1fr 1fr 1fr;
   gap: 24px;
-  max-height: 184px;       /* высота ограничена */
-  overflow: hidden;         /* всё, что ниже — скрывается */
-  transition: max-height 0.4s ease;
+  max-height: 184px;   
+  overflow: hidden;    
+  transition:0.4s ease;
+  margin-left: 24px;
 }
 
 .swiper-wrapper.show-all {
-  max-height: none;         /* снимаем ограничение при раскрытии */
+  max-height: none;      
 }
 
 .swiper-slide {
