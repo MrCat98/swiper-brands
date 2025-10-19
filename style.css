@@ -19,6 +19,8 @@ body{
     font-family: "TT Lakes";
     min-width: 320px;
     height: auto;
+    padding: 0;
+    margin: 0;
 }
 
 .all-list{
@@ -35,7 +37,7 @@ body{
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: -0.2;
+    letter-spacing: -0.2px;
     color: #7E7E82;
     text-transform: uppercase;
     display: flex;
@@ -86,7 +88,7 @@ body{
 /*display none*/
 
 
-.arrow-watch-all{
+.button-watch-all{
     display: none;
 }
 
@@ -99,7 +101,7 @@ body{
         margin: 16px 0 16px 24px;
         width:100%;
         height: 56px;
-        background:linear-gradient(to right, #F8F8F8,#FFFFFF);
+        background:linear-gradient(to right, #F8F8F8, #FFFFFF);
     }
 
 
@@ -108,14 +110,19 @@ body{
         background-color: #F8F8F8;
     }
 
-    .arrow-watch-all{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:9px;
-    margin:24px 0 24px 24px;
-    border:1px solid transparent;
-    background-color:#F8F8F8;
+    .button-watch-all{
+        font-weight:500;
+        font-size: 16px;
+        line-height:24px;
+        letter-spacing: -0.2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:9px;
+        margin:24px 0 24px 24px;
+        border:1px solid transparent;
+        background-color:#F8F8F8;
+        cursor: pointer;
 }
 
 
@@ -128,41 +135,28 @@ body{
   overflow: hidden;    
   transition:0.4s ease;
   margin-left: 24px;
+  transition:max-height 0.5s ease;
 }
 
 .swiper-wrapper.show-all {
-  max-height: none;      
+  max-height: 10000px;      
 }
 
 .swiper-slide {
-    display: flex;
-  padding: 10px;
-  text-align: center;
-  font-weight: bold;
-     width:240px;
-    height: 72px;
-    border: 1px solid #eaeaea;
-    border-radius: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left:16px;
-    background-color: #ffffff;
-
+  width: 224px;
+  height: 72px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding-left: 16px;
 }
 
 
-.swiper-slide{
-    width: 224px;
-    height: 72px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left:16px;
-}
 
-
-.arrow-watch-all:hover {
+.button-watch-all:focus{
   color: rgba(126, 126, 130, 0.6);
 }
 
@@ -171,6 +165,14 @@ body{
     display: none;
 }
 
+.arrow{
+    width: 24px;
+    height: 24px;
+    transition: 0.3s ease;
+}
+.button-watch-all.active .arrow {
+  transform: rotate(180deg);
+}
 
 }
 
@@ -188,40 +190,50 @@ body{
         background:linear-gradient(to right, #F8F8F8,#FFFFFF);
     }
 
-      .arrow-watch-all{
+    .button-watch-all{
         width: 133px;
         height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:9px;
-    margin: 31px;
-    border:1px solid transparent;
-    background-color:#F8F8F8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:9px;
+        margin: 31px;
+        border:1px solid transparent;
+        background-color:#F8F8F8;
 }
 
 
 .swiper-wrapper {
     margin-left:32px;
-  display: grid;
-  grid-template-columns:1fr 1fr 1fr 1fr;
-  gap: 32px;
-  max-height: 184px;
-  overflow: hidden; 
-  transition:0.4s ease;
+    display: grid;
+    gap: 16px;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    max-height: 170px;
+    overflow: hidden; 
+    transition:max-height 0.5s ease;
 }
 
 .swiper-wrapper.show-all {
-  max-height: none; 
+  max-height: 10000px;
 }
 
 .swiper-slide {
     display: flex;
-  padding: 10px;
+    padding: 10px;
+  
 }
    
 .pagination-wrapper{
     display: none;
+}
+
+.arrow{
+    width: 24px;
+    height: 24px;
+    transition: 0.3s ease;
+}
+.button-watch-all.active .arrow {
+  transform: rotate(180deg);
 }
 
 }

@@ -25,16 +25,16 @@ window.addEventListener('resize', initSwiper);
 
 const box = document.getElementById('swiper-section')
 const changeButton = document.getElementById("watch")
+const buttonText = document.querySelector('.button-watch-text')
 
 changeButton.addEventListener('click', () =>{
   box.classList.toggle('show-all');
+  changeButton.classList.toggle('active');
 
   if(box.classList.contains('show-all')){
-    changeButton.textContent ='Скрыть';
-    Image.src = './img/arrow.svg'
+    buttonText.textContent ='Скрыть';
   } else {
-    changeButton.textContent = 'Показать все';
-    Image.src = './img/arrow.svg'
+    buttonText.textContent = 'Показать все';
   }
 
 })
