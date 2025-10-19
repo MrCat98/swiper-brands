@@ -42,14 +42,23 @@ body{
 }
 
 .swiper-wrapper{
-    margin-left: 16px;
+   display: flex;
+   gap:16px;
 }
 
 .arrow-go{
+    display: flex;
+    justify-content: flex-end;
     width: 40px;
     height: 40px;
     display: flex;
     flex:1;
+}
+
+.logo-img{
+    display: flex;
+    justify-content: flex-start;
+   
 }
 
 .swiper-slide{
@@ -61,6 +70,7 @@ body{
     justify-content: center;
     align-items: center;
     padding-left:16px;
+    background-color: #ffffff;
 
 }
 
@@ -78,7 +88,6 @@ body{
 
 @media (min-width:768px) and (max-width:1120px){
 
-
     .list-title{
         display: flex;
         justify-content: flex-start;
@@ -90,22 +99,27 @@ body{
     }
 
 
+    .all-list{
+        background-color: #F8F8F8;
+    }
+
     .arrow-watch-all{
     display: flex;
     justify-content: center;
     align-items: center;
     gap:9px;
-    margin: 16px;
+    margin:24px 0 24px 24px;
     border:1px solid transparent;
     background-color:#F8F8F8;
 }
 
 
+
 .swiper-wrapper {
   display: grid;
   grid-template-columns:1fr 1fr 1fr;
-  gap: 10px;
-  max-height: 150px;       /* высота ограничена */
+  gap: 24px;
+  max-height: 184px;       /* высота ограничена */
   overflow: hidden;         /* всё, что ниже — скрывается */
   transition: max-height 0.4s ease;
 }
@@ -119,6 +133,16 @@ body{
   padding: 10px;
   text-align: center;
   font-weight: bold;
+     width:240px;
+    height: 72px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:16px;
+    background-color: #ffffff;
+
 }
 
 
@@ -146,35 +170,52 @@ body{
 
 
 @media(min-width:1120px) {
+
+
+     .list-title{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 16px 0 16px 32px;
+        width:100%;
+        height: 56px;
+        background:linear-gradient(to right, #F8F8F8,#FFFFFF);
+    }
+
       .arrow-watch-all{
+        width: 133px;
+        height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap:9px;
-    margin: 16px;
+    margin: 31px;
     border:1px solid transparent;
     background-color:#F8F8F8;
 }
 
 
 .swiper-wrapper {
+    margin-left:32px;
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
-  gap: 10px;
-  max-height: 150px;       /* высота ограничена */
-  overflow: hidden;         /* всё, что ниже — скрывается */
-  transition: max-height 0.4s ease;
+  gap: 32px;
+  max-height: 184px;
+  overflow: hidden; 
+  transition:0.4s ease;
 }
 
 .swiper-wrapper.show-all {
-  max-height: none;         /* снимаем ограничение при раскрытии */
+  max-height: none; 
 }
 
 .swiper-slide {
     display: flex;
   padding: 10px;
-  text-align: center;
-  font-weight: bold;
 }
-    
+   
+.pagination-wrapper{
+    display: none;
+}
+
 }
