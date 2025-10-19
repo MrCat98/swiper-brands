@@ -23,10 +23,15 @@ initSwiper();
 
 window.addEventListener('resize', initSwiper);
 
-const buttonWath = document.getElementById('wath-button');
+let toggleBtn = document.getElementById('wath-button');
+let brandsList = document.querySelector('.swiper-wrapper');
 
-buttonWath.addEventListener("mouseover", event =>{
+toggleBtn.addEventListener('click', () => {
+  brandsList.classList.toggle('show');
 
-  event.target.style.backgroundColor = "#7E7E82;"
-  
-})
+  if (brandsList.classList.contains('show')) {
+    toggleBtn.textContent = 'Скрыть';
+  } else {
+    toggleBtn.textContent = 'Показать все';
+  }
+});

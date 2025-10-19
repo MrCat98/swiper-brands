@@ -106,10 +106,6 @@ body{
     background-color:#F8F8F8;
 }
 
-.arrow-watch-all{
-    display: flex;
-}
-
 
 .swiper-wrapper{
     width:100%;
@@ -134,9 +130,9 @@ body{
 
 }
 
-.swiper-wrapper.show.swiper-slide{
-display: block;
-}
+
+
+/*display none*/
 .pagination-wrapper{
     display: none;
 }
