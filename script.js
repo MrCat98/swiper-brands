@@ -31,8 +31,10 @@ changeButton.addEventListener('click', () =>{
 
   if(box.classList.contains('show-all')){
     changeButton.textContent ='Скрыть';
+    Image.src = './img/arrow.svg'
   } else {
     changeButton.textContent = 'Показать все';
+    Image.src = './img/arrow.svg'
   }
 
 })
