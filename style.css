@@ -143,8 +143,8 @@ body{
 }
 
 .swiper-slide {
-  width: 224px;
-  height: 72px;
+  min-width: 224px;
+  min-height: 72px;
   border: 1px solid #eaeaea;
   border-radius: 6px;
   display: flex;
