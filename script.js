@@ -23,15 +23,16 @@ initSwiper();
 
 window.addEventListener('resize', initSwiper);
 
-let toggleBtn = document.getElementById('wath-button');
-let brandsList = document.querySelector('.swiper-wrapper');
+const box = document.getElementById('swiper-section')
+const changeButton = document.getElementById("watch")
 
-toggleBtn.addEventListener('click', () => {
-  brandsList.classList.toggle('show');
+changeButton.addEventListener('click', () =>{
+  box.classList.toggle('show-all');
 
-  if (brandsList.classList.contains('show')) {
-    toggleBtn.textContent = 'Скрыть';
+  if(box.classList.contains('show-all')){
+    changeButton.textContent ='Скрыть';
   } else {
-    toggleBtn.textContent = 'Показать все';
+    changeButton.textContent = 'Показать все';
   }
-});
+
+})
