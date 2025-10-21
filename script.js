@@ -3,7 +3,7 @@ let swiperInstance;
 function initSwiper() {
   if (window.innerWidth < 768 && !swiperInstance) {
     swiperInstance = new Swiper('.swiper', {
-      slidesPerView: 1.5,
+      slidesPerView:'auto',
       spaceBetween: 16,
       loop: true,
       pagination: {
