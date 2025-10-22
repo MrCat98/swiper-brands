@@ -47,6 +47,7 @@ body{
         height:80px;
         padding-left:16px;
         background: linear-gradient(to right,#F8F8F8,#ffffff );
+        border-top:1px solid #D9FFF5;
     }
 
 .swiper-wrapper{
@@ -211,6 +212,10 @@ body{
 }
 
     .button-watch-all{
+          font-weight:500;
+        font-size: 16px;
+        line-height:24px;
+        letter-spacing: -0.2px;
         width: 133px;
         height: 24px;
         display: flex;
